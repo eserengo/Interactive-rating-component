@@ -1,0 +1,16 @@
+:root {
+  --blue: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: "Overpass";
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution > a {
+  color: var(--blue);
+}
