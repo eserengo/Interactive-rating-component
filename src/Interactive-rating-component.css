@@ -1,14 +1,137 @@
 :root {
+  --white: hsl(0, 0%, 100%);
+  --orange: hsl(25, 97%, 53%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(215, 12%, 29%);
   --blue: hsl(228, 45%, 44%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
 }
 
 body {
   font-family: "Overpass";
+  background-color: var(--very-dark-blue);
+  min-width: 300px;
+}
+
+header {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: bold;
+  margin: 3em 1em 0.5em;
+  user-select: none;
+}
+
+p {
+  color: var(--light-grey);
+  font-size: 12px;
+  width: 85%;
+  user-select: none;
+}
+
+.fa-star {
+  color: var(--medium-grey);
+  font-size: 28px;
+  font-weight: bold;
+  margin-inline: 0.25em;
+  margin-block: 0.75em;
+}
+
+.fa-star:hover {
+  cursor: pointer;
+}
+
+i:first-of-type {
+  margin-left: 1.25em;
+}
+
+.active {
+  color: var(--orange);
+}
+
+button {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--white);
+  background-color: var(--orange);
+  border-radius: 25px;
+  border: none;
+  width: 22em;
+  height: 3.5em;
+  margin: 0 1em;
+}
+
+button:hover {
+  color: var(--orange);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.card {
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 325px;
+  height: 350px;
+  border-radius: 25px;
+}
+
+.inactive {
+  display: none;
+}
+
+img {
+  display: block;
+  width: 40%;
+  height: 25%;
+}
+
+#output {
+  margin: 0.5em 0;
+}
+
+#output > .fa-star:hover {
+  cursor: default;
+  user-select: none;
+}
+
+#thankyou {
+  position: relative;
+}
+
+#thankyou > header {
+  margin-top: 0;
+}
+
+#closeBtn {
+  color: var(--light-grey);
+  font-size: 1.25em;
+  position: absolute;
+  top: 0.5em;
+  right: 0.75em;
+}
+
+#closeBtn:hover {
+  color: var(--white);
+  cursor: pointer;
 }
 
 .attribution {
+  color: var(--white);
   font-size: 11px;
   text-align: center;
+  margin-top: 10px;
 }
 
 .attribution > a {
